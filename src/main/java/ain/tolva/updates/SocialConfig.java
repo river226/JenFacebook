@@ -10,7 +10,7 @@ import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 
 /**
- * @Author jriver
+ * @author jriver
  */
 
 @Configuration

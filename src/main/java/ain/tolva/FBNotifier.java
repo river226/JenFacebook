@@ -11,10 +11,11 @@ import hudson.tasks.BuildStepMonitor;
 import hudson.tasks.Notifier;
 import hudson.tasks.Publisher;
 import net.sf.json.JSONObject;
+import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.StaplerRequest;
 
 /**
- * @Author jriver
+ * @author jriver
  *
  * Post Build status of a Jenkins project onto Facebook
  */
@@ -22,6 +23,11 @@ public class FBNotifier extends Notifier {
 
     private final String local;
 
+    @DataBoundConstructor
+    public FBNotifier() {
+        this("");
+    }
+    
     public FBNotifier(String local) {
         this.local = local;
     }
